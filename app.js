@@ -47,11 +47,11 @@ document.querySelector('.cardbtn').addEventListener('click', function (){
     let number1 = value1.charAt(1);
     let value2 = cards[i+1];
     let colour2 = value2.charAt(0);
-    let number2 = value2.charAt(1);
+    let number2 = value2.charAt(1);                 //stores the colour and number of each card as a variable for later use
     card1.src = 'images/' + colour1 + '.jpg';
     num1.src = 'images/num_' + number1 + '.png'; 
     card2.src = 'images/' + colour2 + '.jpg';
-    num2.src = 'images/num_' + number2 + '.png';
+    num2.src = 'images/num_' + number2 + '.png';        //changes the images of the card to display the correct card for the user to see
     if(colour1 == colour2){
         if(number1 > number2){
             pl1Win(i);
@@ -80,13 +80,13 @@ document.querySelector('.cardbtn').addEventListener('click', function (){
                 pl2Win(i);
             }
         }
-    }
+    }                                             //if statements to calculate the winner of each round and run the appropriate function
     if(i>=28){
         button.disabled = true;
         console.log(pl1Cards);
         console.log(pl2Cards);
         if(pl1Cards.length > pl2Cards.length){
-            console.log("player 1 has won");
+            console.log("player 1 has won");                    //calculate the overall winner
         } else {
             console.log("player 2 has won");
         }
@@ -100,7 +100,7 @@ let pl1Win = function(index){
     let card2 = (cards[index+1]);
     pl1Cards.push(card1);
     pl1Cards.push(card2);
-}
+}                                   //function to store winners cards
 let pl2Cards = [];
 let pl2Win = function(index){
     console.log("player 2 wins");
