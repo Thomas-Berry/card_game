@@ -52,29 +52,29 @@ document.querySelector('.cardbtn').addEventListener('click', function (){
     num1.src = 'images/num_' + number1 + '.png'; 
     card2.src = 'images/' + colour2 + '.jpg';
     num2.src = 'images/num_' + number2 + '.png';        //changes the images of the card to display the correct card for the user to see
-    if(colour1 == colour2){
+    if(colour1 === colour2){
         if(number1 > number2){
             pl1Win(i);
         } else {
             pl2Win(i);
         }
     } else {
-        if(colour1 == 0){
-            if(colour2==2){
+        if(colour1 === "0"){
+            if(colour2==="2"){
                 pl1Win(i);
             } else {
                 pl2Win(i);
             }
         } 
-        if(colour1 == 1){
-            if(colour2 == 0){
+        if(colour1 === "1"){
+            if(colour2 === "0"){
                 pl1Win(i);
             } else {
                 pl2Win(i);
             }
         }
-        if(colour1 == 2){
-            if(colour2 == 1){
+        if(colour1 === "2"){
+            if(colour2 === "1"){
                 pl1Win(i);
             } else {
                 pl2Win(i);
